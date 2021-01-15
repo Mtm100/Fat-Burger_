@@ -9,44 +9,173 @@ body {
   font-size: 14px;
   color: #212121;
   line-height: 1.4;
-  background-color: #F9F9F9;
+  
 }
 
-/* Nav Bar */
-
-.navigation-bar {
-  position: absolute;
-  width: 100%;  
-  height: 90px; 
-  background-color: #f5eba9; 
-}
+/* Mobile Nav Bar; */
 .logo {
+  position: static;
   float: left;
   display: inline-block;
   vertical-align: top;
   width: 78px;
-  margin-left: 60px;
-  margin-right: 20px;
+  
+
   margin-top: 6.5px;  
+  background-color: transparent;
+}
+.nav_wrapper {
+  position: absolute;
+  width: 100%;  
+  height: 90px; 
+  background-color: #f5eba9; 
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f5eba9;
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .nav_wrapper{
+  clip-path: circle(75%);
+}
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #f5eba9;
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+  background: #fff;
+  color: #dd1616;
+}
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+.nav_wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.nav_wrapper ul li{
+  margin: 15px 0;
+}
+.nav_wrapper ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+
+.nav_wrapper ul li a:hover:after{
+  transform: scaleY(1);
+}
+.nav_wrapper ul li a:hover{
+  color: #dd1616;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.desktopnav {display: block;}
+.menu-btn {display: none;}
+.nav_wrapper {display: none;}
+
+@media screen and (max-width: 768px) {
+
+  .desktopnav {display: none;}
+.menu-btn {display: block;}
+.nav_wrapper {display: block;}
+
+}
+/* Desktop Nav Bar; */
+.desktopnav{
+  padding-top: 35px;
+  padding-right: 100px;
 }
 .nav_links{
   float: right;
-  display: inline-block;
   vertical-align: top;
   margin-right: 20px;
-  height: 80px;       
-  line-height: 86px;   
   font-family: 'Gothic A1', sans-serif;
   font-weight: 600;
   font-size: 18px;
   font-style: bold;
   color: #F9F9F9;
   text-decoration: none;
+  background:none !important;
 }
 .nav_links:hover { 
   color: #ff3235;
 }
 
+/* Front Page Button */
+.button {
+  position: absolute;
+  font-weight: 300;
+  font-family: 'Gothic A1', sans-serif;
+  color:#ffffff;
+  background-color: #ff3235;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
+  top: 50%;
+  left: 50%;
+  margin-top: 200px;
+  margin-left: -50px;
+ 
+}
+.button:hover { 
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+/* from a minimum width of 650px and bigger */
+@media (min-width: 300px) {
+  .button {
+  margin-top: 110px;
+  }
+}
+/* from a minimum width of 650px and bigger */
+@media (min-width: 650px) {
+  .button {
+    font-size: 16px;
+    padding: 20px;
+    margin-top: 130px;
+  }
+}
+/* from a minimum width of 650px and bigger */
+@media (min-width: 1024px) {
+  .button {
+    font-size: 16px;
+    padding: 20px;
+    margin-top: 130px;
+  }
+}
 
 /* Home Page Background Img */
 .bgimg { 
@@ -69,6 +198,37 @@ body {
   margin-top: -60px;
   margin-left: -170px;
 }
+/* from a minimum width of 400px and bigger */
+@media (min-width: 300px) {
+  .headline {
+    font-size: 50px;
+    margin-left: -110px;
+    position: absolute;
+  }
+}
+
+/* from a minimum width of 650px and bigger */
+@media (min-width: 650px) {
+  .headline {
+    font-size: 70px;
+    margin-left: -150px;
+    position: absolute;
+  }
+}
+
+/* from a minimum width of 650px and bigger */
+@media (min-width: 1000px) {
+  .headline {
+    font-size: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -170px;
+  }
+}
+
+
 section {
   width: 100%;
   padding: 0 7%;
@@ -78,6 +238,13 @@ section {
   height: 100vh;
   
 }
+
+.content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
 .heading-4 {
   font-family: 'Gothic A1', sans-serif;
   font-weight: 600;
@@ -132,34 +299,8 @@ p{
   text-align: center;
 }
 
-.content {
-  display: table-cell;
-  vertical-align: middle;
-}
 
-.button {
-  font-weight: 300;
-  font-family: 'Gothic A1', sans-serif;
-  color:#ffffff;
-  background-color: #ff3235;
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  border-radius: 12px;
-  top: 50%;
-  margin-left: 40%;
-  margin-top: 200px;
- 
-}
-.button:hover { 
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-}
+
 .cheesebtn{
   font-size: 16px;
   font-weight: 300;
@@ -266,6 +407,8 @@ input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
   font-size: 18px;
 }
 
+
+
 body {
 
   font-family: 'Gothic A1', sans-serif;
@@ -274,7 +417,8 @@ body {
   color: #b3aca7;
 }
 
-header {
+
+.contacthead {
   color: #ff3235;
   position: relative;
   font-weight: 600;
@@ -388,4 +532,4 @@ textarea:hover {
    /* the next props are meant to keep this block independent from the other floated one */
    width: auto;
    overflow: hidden;
-}​​
+}
