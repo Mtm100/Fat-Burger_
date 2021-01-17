@@ -148,9 +148,8 @@ input[type="checkbox"]{
   margin: 4px 2px;
   border-radius: 12px;
   top: 50%;
-  left: 50%;
-  margin-top: 200px;
-  margin-left: -50px;
+  right: 35%;
+
  
 }
 .button:hover { 
@@ -198,8 +197,7 @@ input[type="checkbox"]{
   font-size: 70px;
   position: absolute;
   top: 40%;
-  left: 50%;
-  margin-left: -120px;
+  left: 45%;
 }
 /* from a minimum width of 400px and bigger */
 @media (min-width: 300px) {
