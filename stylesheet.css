@@ -72,6 +72,9 @@ body {
   transform: translate(-50%, -50%);
   list-style: none;
   text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  
 }
 .nav_wrapper ul li{
   margin: 15px 0;
@@ -86,6 +89,7 @@ body {
   position: relative;
   line-height: 50px;
   transition: all 0.3s ease;
+  
 }
 
 .nav_wrapper ul li a:hover:after{
@@ -193,10 +197,9 @@ input[type="checkbox"]{
   color: #ffffff;
   font-size: 70px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  margin-top: -60px;
-  margin-left: -170px;
+  margin-left: -120px;
 }
 /* from a minimum width of 400px and bigger */
 @media (min-width: 300px) {
