@@ -193,6 +193,8 @@ input[type="checkbox"]{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  max-width: 100%;
+  display: block;
   
 }
 @media (min-width: 300px) {
@@ -200,6 +202,8 @@ input[type="checkbox"]{
     background: url(images/Hero-mobile.jpg) no-repeat center center fixed; 
     -webkit-background-size: 100%;
   background-size: cover;
+  max-width: 100%;
+  display: block;
  
   }
 }
@@ -207,6 +211,8 @@ input[type="checkbox"]{
   .bgimg {
     background: url(images/Hero.jpg) no-repeat center center fixed; 
     background-size: cover;
+    max-width: 100%;
+  display: block;
   }
 }
 
