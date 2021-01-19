@@ -197,10 +197,11 @@ input[type="checkbox"]{
 @media (min-width: 300px) {
   .bgimg {
     background: url(images/Hero-mobile.jpg) no-repeat center center fixed; 
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  background-size: 90%;
   }
 }
 @media (min-width: 600px) {
