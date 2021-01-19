@@ -187,34 +187,22 @@ input[type="checkbox"]{
 }
 
 /* Home Page Background Img */
+
 .bgimg { 
-  background: url(images/Hero.jpg) no-repeat center center fixed; 
-  -webkit-background-size: 100%;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-image: url(images/Hero.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-  max-width: 100%;
-  display: block;
-  
 }
-@media (min-width: 300px) {
+@media only screen and (max-width: 500px) {
   .bgimg {
-    background: url(images/Hero-mobile.jpg) no-repeat center center fixed; 
-    -webkit-background-size: 100%;
-  background-size: cover;
-  max-width: 100%;
-  display: block;
- 
+    /* The file size of this background image is 93% smaller
+       to improve page load speed on mobile internet connections */
+    background-image: url(images/Hero-mobile.jpg);
   }
 }
-@media (min-width: 600px) {
-  .bgimg {
-    background: url(images/Hero.jpg) no-repeat center center fixed; 
-    background-size: cover;
-    max-width: 100%;
-  display: block;
-  }
-}
+
 
 /*Homepage Text & Button */
 
