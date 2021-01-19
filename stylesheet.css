@@ -163,7 +163,7 @@ input[type="checkbox"]{
 @media (min-width: 300px) {
   .button {
   margin-top: 110px;
-  position: fixed;
+  position: absolute;
   }
 }
 /* from a minimum width of 650px and bigger */
@@ -189,29 +189,24 @@ input[type="checkbox"]{
 /* Home Page Background Img */
 .bgimg { 
   background: url(images/Hero.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
+  -webkit-background-size: 100%;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  
 }
 @media (min-width: 300px) {
   .bgimg {
     background: url(images/Hero-mobile.jpg) no-repeat center center fixed; 
-    width: 800px;
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+    -webkit-background-size: 100%;
   background-size: cover;
+ 
   }
 }
 @media (min-width: 600px) {
   .bgimg {
-    width: 100%;
     background: url(images/Hero.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background-size: cover;
   }
 }
 
