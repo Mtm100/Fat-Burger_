@@ -135,7 +135,7 @@ input[type="checkbox"]{
 
 /* Front Page Button */
 .button {
-  position: absolute;
+  position: fixed;
   font-weight: 300;
   font-family: 'Gothic A1', sans-serif;
   color:#ffffff;
@@ -148,7 +148,9 @@ input[type="checkbox"]{
   margin: 4px 2px;
   border-radius: 12px;
   top: 50%;
-  right: 35%;
+  left: 35%;
+  width: fit-content;
+  
 
  
 }
@@ -161,6 +163,7 @@ input[type="checkbox"]{
 @media (min-width: 300px) {
   .button {
   margin-top: 110px;
+  position: fixed;
   }
 }
 /* from a minimum width of 650px and bigger */
@@ -169,6 +172,8 @@ input[type="checkbox"]{
     font-size: 16px;
     padding: 20px;
     margin-top: 130px;
+    left: 45%;
+
   }
 }
 /* from a minimum width of 650px and bigger */
@@ -177,6 +182,7 @@ input[type="checkbox"]{
     font-size: 16px;
     padding: 20px;
     margin-top: 130px;
+ 
   }
 }
 
@@ -188,6 +194,25 @@ input[type="checkbox"]{
   -o-background-size: cover;
   background-size: cover;
 }
+@media (min-width: 300px) {
+  .bgimg {
+    background: url(images/Hero-mobile.jpg) no-repeat center center fixed; 
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: cover;
+  }
+}
+@media (min-width: 600px) {
+  .bgimg {
+    background: url(images/Hero.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+}
+
 /*Homepage Text & Button */
 
 .headline{
@@ -196,7 +221,7 @@ input[type="checkbox"]{
   color: #ffffff;
   font-size: 70px;
   position: absolute;
-  top: 40%;
+  top: 38%;
   left: 45%;
 }
 /* from a minimum width of 400px and bigger */
@@ -212,7 +237,7 @@ input[type="checkbox"]{
 @media (min-width: 650px) {
   .headline {
     font-size: 70px;
-    margin-left: -150px;
+    margin-left: -100px;
     position: absolute;
   }
 }
@@ -220,12 +245,7 @@ input[type="checkbox"]{
 /* from a minimum width of 650px and bigger */
 @media (min-width: 1000px) {
   .headline {
-    font-size: 70px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -60px;
-  margin-left: -170px;
+    top: 40%;
   }
 }
 
